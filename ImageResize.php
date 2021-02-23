@@ -1,6 +1,6 @@
 <?php
 
-namespace noam148\imageresize;
+namespace petersonsilvadejesus\imageresize;
 
 use Imagine\Image\ImageInterface;
 use Imagine\Image\Point;
@@ -103,7 +103,7 @@ class ImageResize {
 			$sFilenameReplace = preg_replace("/[^\w\.\-]+/", '-', $sFileName);
 			//set filename
 			$imageFileName = $sFileHashShort . "_" . $sFilenameReplace;
-			//else use file hash as filename	
+			//else use file hash as filename
 		} else {
 			$imageFileName = $sFileHash;
 		}
@@ -132,7 +132,7 @@ class ImageResize {
 			{
 				FileHelper::createDirectory($imageFilePath, 0755);
 			}
-      
+
       //create image
       $box = new Box($width, $height);
       $image = Image::getImagine()->open($filePath);
@@ -165,7 +165,7 @@ class ImageResize {
 	 * @return string
 	 */
 	public function getUrl($filePath, $width, $height, $mode = "outbound", $quality = null, $fileName = null) {
-		//get original file 
+		//get original file
 		$normalizePath = FileHelper::normalizePath(Yii::getAlias($filePath));
 		//get cache url
 		$filesUrls = [];
