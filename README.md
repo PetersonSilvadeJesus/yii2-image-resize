@@ -10,12 +10,12 @@ The preferred way to install this extension is through [composer](http://getcomp
 * Either run
 
 ```
-php composer.phar require "noam148/yii2-image-resize" "*"
+php composer.phar require "petersonsilvadejesus/yii2-image-resize" "*"
 ```
 or add
 
 ```json
-"noam148/yii2-image-resize" : "*"
+"petersonsilvadejesus/yii2-image-resize" : "*"
 ```
 
 to the require section of your application's `composer.json` file.
@@ -25,7 +25,7 @@ to the require section of your application's `composer.json` file.
 ```php
 'components' => [
     'imageresize' => [
-		'class' => 'noam148\imageresize\ImageResize',
+		'class' => 'petersonsilvadejesus\imageresize\ImageResize',
 		//path relative web folder. In case of multiple environments (frontend, backend) add more paths 
 		'cachePath' =>  ['assets/images', '../../frontend/web/assets/images'],
 		//use filename (seo friendly) for resized images else use a hash
